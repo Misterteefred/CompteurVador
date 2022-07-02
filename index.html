@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>CompteurVador</title>
+  </head>
+  <body>
+    
+    <div class="notification" id="notification">
+      <p id="notification-texte">Voici un peu de texte</p>
+    </div>
+   
+    <div class="titre">limite haute</div>
+    <input
+      type="number"
+      class="inputLimites"
+      id="inputLimiteHaute"
+      name="inputLimiteHaute"
+      value="10"
+      min="2"
+      max="999"
+    />
+
+    <div class="centre">
+      <div class="centreGauche">
+        <button name="button" class="bouttonPlusMoins" id="bouttonMoins">-</button>
+        <input type="number" name="inputDec" class="inputCentre" id="inputDec" value="1"/>
+      </div>
+
+      <div class="compteur" id="compteur">0</div>
+     
+
+      <div class="centreDroit">
+        <button name="button" class="bouttonPlusMoins" id="bouttonPlus">+</button>
+        <input type="number" name="inputInc" class="inputCentre" id="inputInc" value="1"/>
+      </div>
+    </div>
+    <div class="bas">
+      <div class="titre">Limite Basse</div>
+      <input
+        type="number"
+        class="inputLimites"
+        id="inputLimiteBasse"
+        name="inputLimiteBasse"
+        value="-10"
+        min="-999"
+        max="-2"
+      />
+
+      <input type="button" value="Reset" class="bouttonReset" id="reset"/>
+
+      <div class="titre titreZoneDeClic">Zone de clic (souris)</div>
+      <div class="zoneDeClic" id="zoneDeClic">
+        Clic gauche : incrémentation<br/>
+        Clic droit : décrémentation
+      </div>
+      <button name="button" class="bouttonTuto" id="bouttonTuto">Tuto</button>      
+    </div>    
+    
+    <div class="tuto" id="tuto">
+      <button name="button" class="tutoCroix" id="tutoCroix">x</button>
+
+      
+      <div id="tuto-texte"> <p class="titreTuto">Fonctionnalités :</p><p>Boutton "+" pour incrémenter.<br>
+      Boutton "-" pour décrémenter.</p>
+      Sous les bouttons, tu as la possibilité de modifier les valeurs d'incrémentation et de décrémentation du compteur.<br>
+      Les limites hautes et basses peuvent être modifiées<p>
+      Action de la souris et du clavier :</p>
+      La molette de la souris ainsi que les flèches directionnelles "haut" et "bas" du clavier permettent d'incrémenter et de décrémenter le compteur.<br>
+      <p>Et pour finir, les touches "i" et "d" peuvent modifier les valeurs d'incrémentation et de décrémentation.</p></div>
+    </div>
+    <script src="projet.js"></script>
+  </body>
+</html>
